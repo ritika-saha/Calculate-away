@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class=heading><h1>Calculator</h1></div>
+    <br>
+    <div class="container">
+    <form name="form" class="form">
+        <input type="text" class="text" name="text" placeholder="Enter..." ><br>
+        
+        <input type="button" class="btn" value="7" onclick="form.text.value+='7'">
+        <input type="button" class="btn" value="8" onclick="form.text.value+='8'">
+        <input type="button" class="btn" value="9" onclick="form.text.value+='9'">
+        <input type="button" class="btn" value="+" onclick="form.text.value+='+'"><br>
+        <input type="button" class="btn" value="4" onclick="form.text.value+='4'">
+        <input type="button" class="btn" value="5" onclick="form.text.value+='5'">
+        <input type="button" class="btn" value="6" onclick="form.text.value+='6'">
+        <input type="button" class="btn" value="-" onclick="form.text.value+='-'"><br>
+        <input type="button" class="btn" value="1" onclick="form.text.value+='1'">
+        <input type="button" class="btn" value="2" onclick="form.text.value+='2'">
+        <input type="button" class="btn" value="3" onclick="form.text.value+='3'">
+        <input type="button" class="btn" value="*" onclick="form.text.value+='*'"><br>
+        <input type="button" class="btn" value="c" onclick="form.text.value=''" style="background-color:red">
+        <input type="button" class="btn" value="0" onclick="form.text.value+='0'">
+        <input type="button" class="btn" value="=" onclick="form.text.value=eval(form.text.value)">
+        <input type="button" class="btn" value="/" onclick="form.text.value+='/'"><br>
+
+    </form>
+    
+    </div>
+    
+        <footer class="footer">
+            <p>Made with 💜 By Ritika .</p>
+        </footer>
+
+      <script>
+          document.addEventListener("click",function(event){
+              console.log(event);
+             
+              playSound(event);
+          })
+
+          function playSound(event){
+              
+             var aud= new Audio("sound/tink.wav").play();
+             aud.currentTime=0; 
+          }
+      </script>
+    
+
+    
+</body>
+</html>
